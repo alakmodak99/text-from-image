@@ -4,7 +4,7 @@ var Tesseract = require("tesseract.js");
 router.post("/", async (req, res) => {
   try {
     let data = await Tesseract?.recognize(req?.body?.imageUrl, "eng");
-    res.status(201).send({
+    res?.status(201).send({
       message: "success",
       data: data?.data?.text,
     });
